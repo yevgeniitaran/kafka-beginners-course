@@ -39,6 +39,8 @@ public class ConsumerDemo {
                 logger.info("Key: " + record.key() + ", Value: " + record.value());
                 logger.info("Partition: " + record.partition() + ", Offset: " + record.offset());
             }
+
+            System.out.println("Something for test");
         }
     }
 }
