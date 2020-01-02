@@ -32,6 +32,8 @@ public class ConsumerDemo {
 
         consumer.subscribe(Collections.singleton("first_topic"));
 
+        System.out.println("Master commit 2");
+
         while (true) {
             ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(100));
 
@@ -42,6 +44,7 @@ public class ConsumerDemo {
 
             System.out.println("Something for test");
             System.out.println("master commit");
+
         }
     }
 }
