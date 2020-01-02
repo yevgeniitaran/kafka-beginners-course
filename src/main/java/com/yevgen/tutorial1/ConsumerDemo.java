@@ -41,6 +41,7 @@ public class ConsumerDemo {
             }
 
             System.out.println("Something for test");
+            System.out.println("master commit");
         }
     }
 }
