@@ -51,5 +51,6 @@ public class ProducerDemoKeys {
         // flush and close
         producer.close();
 
+        System.out.println("feature 3 in master");
     }
 }
