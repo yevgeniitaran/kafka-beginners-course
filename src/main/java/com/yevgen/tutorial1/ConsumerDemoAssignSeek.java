@@ -49,6 +49,8 @@ public class ConsumerDemoAssignSeek {
 
                 if (num == 5) break toBreak;
             }
+
+            System.out.println("feature 4 branch ");
         }
     }
 }
