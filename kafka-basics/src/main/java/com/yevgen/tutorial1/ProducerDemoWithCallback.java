@@ -1,4 +1,4 @@
-package java.com.yevgen.tutorial1;
+package com.yevgen.tutorial1;
 
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerConfig;
@@ -9,11 +9,11 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Properties;
 
-public class ProducerDemoKeys {
+public class ProducerDemoWithCallback {
 
     public static void main(String[] args) {
 
-        Logger logger = LoggerFactory.getLogger(ProducerDemoKeys.class);
+        Logger logger = LoggerFactory.getLogger(ProducerDemoWithCallback.class);
 
         String bootstrapServers = "127.0.0.1:9092";
 
@@ -30,7 +30,7 @@ public class ProducerDemoKeys {
 
 
         for (int i = 0; i < 10; i++) {
-            ProducerRecord<String, String> record = new ProducerRecord<>("first_topic", String.valueOf(i), "hello world " + i);
+            ProducerRecord<String, String> record = new ProducerRecord<>("first_topic", "hello world " + i);
             // send data
             producer.send(record, (recordMetadata, e) -> {
                 // executes on successful sent or exception is thrown
@@ -53,6 +53,5 @@ public class ProducerDemoKeys {
         // flush and close
         producer.close();
 
-        System.out.println("feature 3 in master");
     }
 }
