@@ -101,10 +101,12 @@ public class ConsumerDemoWithThreads {
                 consumer.close();
                 countDownLatch.countDown();
             }
+            System.out.println("feature 4 in master ");
         }
 
         public void shutdown() {
             consumer.wakeup();
         }
+
     }
 }

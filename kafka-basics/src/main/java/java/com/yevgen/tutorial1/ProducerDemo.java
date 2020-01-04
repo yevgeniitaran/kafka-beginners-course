@@ -33,5 +33,6 @@ public class ProducerDemo {
         // flush and close
         producer.close();
 
+        System.out.println("feature3 in feature branch");
     }
 }
